@@ -42,6 +42,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Weather")
 
 shorts_image = pygame.image.load(os.path.join(game_folder, 'shorts.jpg')).convert()
+tshirt_image = pygame.image.load(os.path.join(game_folder, 'tshirt.jpg')).convert()
 
 # Loop to keep the window open
 while True:
@@ -58,7 +59,8 @@ while True:
     low_text = font.render(f"LOW: {low_temp}", True, (0, 0, 0))
     screen.blit(high_text, ((WIDTH - high_text.get_width()) // 2, (HEIGHT - high_text.get_height()) // 5 - 15))
     screen.blit(low_text, ((WIDTH - low_text.get_width()) // 2, (HEIGHT - low_text.get_height()) // 4 + 15))
-    screen.blit(shorts_image, (0, 0))
+    screen.blit(shorts_image, (2, 2))
+    screen.blit(tshirt_image, (15,250))
 
     # Update the display
     pygame.display.update()
