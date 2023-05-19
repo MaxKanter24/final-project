@@ -37,10 +37,10 @@ WIDTH = 680
 HEIGHT = 480
 FPS = 30
 font = pygame.font.SysFont('TimesNewRoman', 30)
-
+#screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Weather")
-
+#images load
 shorts_image = pygame.image.load(os.path.join(game_folder, 'shorts.jpg')).convert()
 tshirt_image = pygame.image.load(os.path.join(game_folder, 'tshirt.jpg')).convert()
 
@@ -55,6 +55,7 @@ while True:
     screen.fill((255, 255, 255))
 
     # Render weather information as text and display in the center of the screen
+    # Display images
     high_text = font.render(f"HIGH: {high_temp}", True, (0, 0, 0))
     low_text = font.render(f"LOW: {low_temp}", True, (0, 0, 0))
     screen.blit(high_text, ((WIDTH - high_text.get_width()) // 2, (HEIGHT - high_text.get_height()) // 5 - 15))
